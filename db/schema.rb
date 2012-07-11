@@ -11,11 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120709133330) do
+ActiveRecord::Schema.define(:version => 20120711080811) do
+
+  create_table "checkers", :force => true do |t|
+    t.string   "type"
+    t.string   "name"
+    t.text     "options"
+    t.integer  "server_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "servers", :force => true do |t|
     t.string   "name"
-    t.string   "url"
+    t.string   "ip"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -1,15 +1,17 @@
 <% @servers.each do |s| %>
-
-  <% if s.up? %>
-    <div class="alert alert-success">
-      <strong><%= "#{s.name}" %></strong>
-    </div>
-  <% else %>
-  
-    <div class="alert alert-error">
-      <strong><%= "#{s.name}" %></strong>
-    </div>
-  
+<div class="well">
+  <h1><%= s.name %></h1>
+  <br />
+  <% s.checkers.each do |c| %>
+    <% if c.up? %>
+      <div class="alert alert-success">
+        <strong><%= "#{c.name}" %></strong>
+      </div>
+    <% else %>
+      <div class="alert alert-error">
+        <strong><%= "#{c.name}" %></strong>
+      </div>
+    <% end %>
   <% end %>
-
+</div>
 <% end %>

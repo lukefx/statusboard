@@ -1,10 +1,9 @@
 class Server < ActiveRecord::Base
-  # attr_accessible :title, :body
+  
+  has_many :checkers
   
   def up?
-    io = open(self.url)
-    body = io.read[0, 50]
-    io.status[0] == '200'
+    raise "Subclass and implement it"
   end
   
 end

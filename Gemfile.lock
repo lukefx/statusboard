@@ -45,6 +45,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    ffi (1.0.11-java)
     hike (1.2.1)
     i18n (0.6.0)
     jdbc-sqlite3 (3.7.2)
@@ -54,6 +55,7 @@ GEM
       thor (~> 0.14)
     jruby-openssl (0.7.7)
       bouncy-castle-java (>= 1.5.0146.1)
+    json (1.7.3)
     json (1.7.3-java)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -61,6 +63,10 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.6)
+    net-ldap (0.2.2)
+    net-ping (1.5.3)
+      ffi (>= 1.0.0)
+      net-ldap (~> 0.2.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -115,6 +121,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   jruby-openssl
+  net-ping
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
   therubyrhino
