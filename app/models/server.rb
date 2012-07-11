@@ -1,4 +1,6 @@
 class Server < ActiveRecord::Base
+
+  attr_accessible :name, :ip
   
   has_many :checkers
   
