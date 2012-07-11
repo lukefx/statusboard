@@ -1,9 +1,8 @@
 class PingChecker < Checker
 
   def up?
-    require 'java'
-    address = java.net.InetAddress.getByName(self.server.ip)
-    address.isReachable(5000)
+    p = Net::Ping::External.new(self.server.ip, 7)
+    p.ping?
   end
 
 end
