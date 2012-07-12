@@ -22,7 +22,15 @@ class CheckersController < ApplicationController
         format.html { render :action => "new" }
       end
     end
-        
+  end  
+  
+  def destroy
+    @checker = Checker.find(params[:id])
+    @checker.destroy
+    
+    respond_to do |format|
+      format.html { redirect_to(root_url) }
+    end
   end  
   
 end

@@ -6,10 +6,12 @@
     <% if c.up? %>
       <div class="alert alert-success">
         <strong><%= "#{c.name}" %></strong>
+        <%= link_to "x", { :controller => "checkers", :action => "destroy", :id => c.id }, :type => "button" ,:class => "close", :confirm => "Are you sure?", :method => :delete %>
       </div>
     <% else %>
       <div class="alert alert-error">
         <strong><%= "#{c.name}" %></strong>
+        <%= link_to "x", { :controller => "checkers", :action => "destroy", :id => c.id }, :type => "button" ,:class => "close", :confirm => "Are you sure?", :method => :delete %>
       </div>
     <% end %>
   <% end %>
