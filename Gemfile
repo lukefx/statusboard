@@ -7,6 +7,7 @@ gem 'rails', '3.2.6'
 
 platforms :jruby do
 	gem 'activerecord-jdbcsqlite3-adapter'
+  gem 'jruby-win32ole', :require => 'win32ole'
 	gem 'jruby-openssl'
 end
 
@@ -24,7 +25,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'net-ping'
+gem 'net-ping', :path => 'C:/Users/lsimone/Documents/GitHub/net-ping'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
