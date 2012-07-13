@@ -1,5 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
+require 'java'
 require 'rails/all'
 require 'open-uri'
 

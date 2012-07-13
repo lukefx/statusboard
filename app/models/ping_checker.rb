@@ -1,8 +1,7 @@
 class PingChecker < Checker
 
   def up?
-    p = Net::Ping::TCP.new(self.server.ip, 7)
-    p.ping?
+    java.net.InetAddress.getByName(self.server.ip).isReachable(5000)
   end
 
 end

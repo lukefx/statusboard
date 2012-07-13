@@ -25,7 +25,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'net-ping', :path => 'C:/Users/lsimone/Documents/GitHub/net-ping'
+gem 'net-ping' # but still doesn't work
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

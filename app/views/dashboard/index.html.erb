@@ -15,16 +15,21 @@
       </div>
     <% end %>
   <% end %>
-  <div class="btn-group">
-    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-      Add Check
-      <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      <% Checker.select_options.each do |checker| %>
-        <li><%= link_to checker, { :controller => "checkers", :action => "new", :type => checker, :server_id => s.id }, :remote => true %></li>
-      <% end %>
-    </ul>    
+  
+  <div class="row">
+    <div class="span8">
+      <div class="btn-group">
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+          Add Check
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <% Checker.select_options.each do |checker| %>
+            <li><%= link_to checker, { :controller => "checkers", :action => "new", :type => checker, :server_id => s.id }, :remote => true %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 <% end %>
